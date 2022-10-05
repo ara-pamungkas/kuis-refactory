@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bilangan Faktorial</h1>
+    <form action="">
+        <input type="text" id="input">
+        <button id="tombol">Jumlah</button>
+        <div id="container"></div>
+    </form>
+
+
+
+<script>
+    const input = document.getElementById("input")
+    const tombol = document.getElementById("tombol")
+    const container = document.getElementById("container")
+
+    tombol.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        let hasilInput = input.value
+        let total = 1
+
+        for(let i = hasilInput; i > 0; i--) {
+            total *= i
+        }
+        container.innerHTML = `Hasil ${hasilInput}! dari  adalah : ${total}`
+    })
+
+</script>
+</body>
+</html>
