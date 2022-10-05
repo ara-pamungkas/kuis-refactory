@@ -17,19 +17,25 @@
 
 
 <script>
+    // Mengambil id dari form
     const input = document.getElementById("input")
     const tombol = document.getElementById("tombol")
     const container = document.getElementById("container")
 
+
+    // Menambahkan kejadian ketika user melakukan aksi "Click"
     tombol.addEventListener('click', function(e) {
         e.preventDefault();
 
-        let hasilInput = input.value
-        let total = 1
+        let hasilInput = input.value // Membuat variabel penampung untuk menyimpan value dari input
+        let total = 1   // membuat variabel total dengan value 1, kenapa 1? karena hasil dari seluruh penjumlahan bilangan yang dimasukkan akan di kalikan dengan 1
 
+        // Disini melakukan looping
         for(let i = hasilInput; i > 0; i--) {
             total *= i
         }
+
+        // Memasukkan dan menampilkan hasil dari penjumlahan ke dalam variabel "Container" diatas
         container.innerHTML = `Hasil ${hasilInput}! dari  adalah : ${total}`
     })
 
